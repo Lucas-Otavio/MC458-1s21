@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Laboratório 04</title>        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="description_files/css.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="description_files/github-markdown.css">
+    <style>
+        .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+        font-family: 'Noto Sans', sans-serif;
+        }
+        .markdown-body h6 { margin-bottom: 0; }
+        .markdown-body h6 + ul li {
+        display: inline-block;
+        width: 100%;
+        max-width: 426px;
+        vertical-align: top;
+        }
+        .markdown-body h6 + ul li pre {
+          max-height: 400px;
+        }
+    </style>
+</head>
+<body data-new-gr-c-s-check-loaded="8.877.0" data-gr-ext-installed="">
+    <article class="markdown-body">
+<h3>
+<a id="user-content-instituto-de-computação---unicamp" class="anchor" href="#instituto-de-computa%C3%A7%C3%A3o---unicamp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instituto de Computação - Unicamp</h3>
+<h3>
+<a id="user-content-mc458---projeto-e-análise-de-algoritmos-i" class="anchor" href="#mc458---projeto-e-an%C3%A1lise-de-algoritmos-i" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MC458 - Projeto e Análise de Algoritmos I</h3>
+<h1>
+<a id="user-content-laboratório-id---title" class="anchor" href="#laborat%C3%B3rio-id---title" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Laboratório 04 - Escalonamento para minimizar o tempo total de conclusão</h1><p>Prazo de entrega: <strong>30/06/2021 23:59:59</strong></p><p>Peso: <strong>1</strong></p>
+<p><em>Professor:</em> Eduardo C. Xavier<br>
+<em>Monitor:</em> Luis H. P. Mendes</p>
+<hr>
+<h2>
+<a id="user-content-descrição" class="anchor" href="#descri%C3%A7%C3%A3o" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Descrição</h2>
+<p>Suponha que você receba um conjunto de tarefas <code>S = {a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>}</code>, onde a tarefa <code>a<sub>i</sub></code> requer <code>p<sub>i</sub></code> unidades de tempo de processamento para ser concluída, uma vez iniciada.
+Você tem um computador para executar essas tarefas, e o computador pode executar apenas uma tarefa por vez.
+Seja <code>c<sub>i</sub></code> o <strong>tempo de conclusão</strong> da tarefa <code>a<sub>i</sub></code>, ou seja, o tempo em que a tarefa <code>a<sub>i</sub></code> conclui o processamento.
+Seu objetivo é minimizar o tempo total de conclusão, ou seja, minimizar <code>c<sub>1</sub> + c<sub>2</sub> + ... + c<sub>n</sub></code>.</p>
+<p>Projete e implemente um algoritmo <code>O(n log n)</code> que escalona as tarefas de forma a minimizar o tempo total de conclusão.
+Cada tarefa deve ser executada de forma não preemptiva, ou seja, uma vez que a tarefa <code>a<sub>i</sub></code> é iniciada, ela deve ser executada continuamente por <code>p<sub>i</sub></code> unidades de tempo.</p>
+<h2>
+<a id="user-content-entrada" class="anchor" href="#entrada" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Entrada</h2>
+<p>A entrada consiste em <code>2</code> linhas.<br>
+A primeira linha contém um inteiro positivo <code>n &lt; 1000</code>, o tamanho do conjunto de tarefas.<br>
+A segunda linha contém <code>n</code> número inteiros, o tempo de processamento <code>p<sub>i</sub> &lt; 1000</code> de cada tarefa <code>a<sub>i</sub></code>.</p>
+<h2>
+<a id="user-content-saída" class="anchor" href="#sa%C3%ADda" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Saída</h2>
+<p>Como saída o seu programa deverá imprimir <code>2</code> linhas.<br>
+A primeira linha deve conter um número inteiro, representando o tempo total de conclusão das tarefas no escalonamento ótimo.<br>
+A segunda linha deve conter <code>n</code> números inteiros, representando os índices das tarefas na ordem em que são executadas no escalonamento ótimo.<br>
+Em caso de empate, dê preferência para as tarefas de menor índice.</p>
+<h2>
+<a id="user-content-exemplos" class="anchor" href="#exemplos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exemplos</h2>
+<h3>
+<a id="user-content-teste-01" class="anchor" href="#teste-01" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 01</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc458a/04/dados/arq01.in">Entrada</a></p>
+<pre><code>3
+3 4 4
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc458a/04/dados/arq01.res">Saída</a></p>
+<pre><code>21
+1 2 3
+</code></pre>
+<p>Neste exemplo, temos <code>3</code> tarefas, <code>a<sub>1</sub></code>, <code>a<sub>2</sub></code> e <code>a<sub>3</sub></code>, com <code>p<sub>1</sub> = 3</code>, <code>p<sub>2</sub> = 4</code> e <code>p<sub>3</sub> = 4</code>.<br>
+Em um escalonamento ótimo, primeiro executamos a tarefa <code>a<sub>1</sub></code>, depois a tarefa <code>a<sub>2</sub></code> e, por fim, a tarefa <code>a<sub>3</sub></code>.<br>
+Então <code>c<sub>1</sub> = p<sub>1</sub> = 3</code>, <code>c<sub>2</sub> = c<sub>1</sub> + p<sub>2</sub> = 3 + 4 = 7</code>, <code>c<sub>3</sub> = c<sub>2</sub> + p<sub>3</sub> = 7 + 4 = 11</code>, e o tempo total de conclusão é <code>c<sub>1</sub> + c<sub>2</sub> + c<sub>3</sub> = 3 + 7 + 11 = 21</code>.<br>
+Note que obteriamos um outro escalonamento ótimo executando a tarefa <code>a<sub>3</sub></code> antes da tarefa <code>a<sub>2</sub></code>, porém damos preferência para a tarefa <code>a<sub>2</sub></code>, que possui menor índice.</p>
+<h3>
+<a id="user-content-teste-02" class="anchor" href="#teste-02" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 02</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc458a/04/dados/arq02.in">Entrada</a></p>
+<pre><code>5
+5 5 4 8 6
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc458a/04/dados/arq02.res">Saída</a></p>
+<pre><code>75
+3 1 2 5 4
+</code></pre>
+<p>Neste exemplo, temos <code>5</code> tarefas, <code>a<sub>1</sub></code>, <code>a<sub>2</sub></code>, <code>a<sub>3</sub></code>, <code>a<sub>4</sub></code> e <code>a<sub>5</sub></code>, com <code>p<sub>1</sub> = 5</code>, <code>p<sub>2</sub> = 5</code>, <code>p<sub>3</sub> = 4</code>, <code>p<sub>4</sub> = 8</code> e <code>p<sub>5</sub> = 6</code>.<br>
+Em um escalonamento ótimo, primeiro executamos a tarefa <code>a<sub>3</sub></code>, depois a tarefa <code>a<sub>1</sub></code>, depois a tarefa <code>a<sub>2</sub></code>, depois a tarefa <code>a<sub>5</sub></code> e, por fim, a tarefa <code>a<sub>4</sub></code>.<br>
+Então <code>c<sub>3</sub> = p<sub>3</sub> = 4</code>, <code>c<sub>1</sub> = c<sub>3</sub> + p<sub>1</sub> = 4 + 5 = 9</code>, <code>c<sub>2</sub> = c<sub>1</sub> + p<sub>2</sub> = 9 + 5 = 14</code>, <code>c<sub>5</sub> = c<sub>2</sub> + p<sub>5</sub> = 14 + 6 = 20</code>, <code>c<sub>4</sub> = c<sub>5</sub> + p<sub>4</sub> = 20 + 8 = 28</code>, e o tempo total de conclusão é <code>c<sub>1</sub> + c<sub>2</sub> + c<sub>3</sub> + c<sub>4</sub> + c<sub>5</sub> = 9 + 14 + 4 + 28 + 20 = 75</code>.<br>
+Note que obteriamos um outro escalonamento ótimo executando a tarefa <code>a<sub>2</sub></code> antes da tarefa <code>a<sub>1</sub></code>, porém damos preferência para a tarefa <code>a<sub>1</sub></code>, que possui menor índice.</p>
+<p>Para mais exemplos, consulte os
+<a href="https://susy.ic.unicamp.br:9999/mc458a/04/dados/testes.html">testes abertos no Susy</a>.</p>
+<h2>
+<a id="user-content-observações" class="anchor" href="#observa%C3%A7%C3%B5es" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Observações</h2>
+<ul>
+<li>O número máximo de submissões é <strong>10</strong>;</li><li>O seu programa deve estar completamente contido em um único arquivo denominado <code>lab04.c</code>;</li><li>Para a realização dos testes do SuSy, a compilação dos programas desenvolvidos considerar o comando:__
+<code>gcc -std=c99 -pedantic -Wall -o lab04 lab04.c</code>;</li><li>Indente corretamente o seu código e inclua comentários no decorrer do seu programa.</li>
+</ul>
+
+    </article>
+
+
+</body></html>
