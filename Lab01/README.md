@@ -38,7 +38,7 @@ Como saída o seu programa deverá imprimir o valor do produto da subsequência 
 -0.627 -7.142 0.000 6.278 -4.148
 ```
 
-[Saída](https://github.com/Lucas-Otavio/MC458-1s21/blob/main/Lab01/Test%20Cases/arq02.in)
+[Saída](https://github.com/Lucas-Otavio/MC458-1s21/blob/main/Lab01/Test%20Cases/arq02.out)
 
 ```
 6.278000
@@ -53,7 +53,7 @@ Como saída o seu programa deverá imprimir o valor do produto da subsequência 
 1.161 1.542 0.000 6.348 1.686
 ```
 
-[Saída](https://github.com/Lucas-Otavio/MC458-1s21/blob/main/Lab01/Test%20Cases/arq03.in)
+[Saída](https://github.com/Lucas-Otavio/MC458-1s21/blob/main/Lab01/Test%20Cases/arq03.out)
 
 ```
 10.702728
