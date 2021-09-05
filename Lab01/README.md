@@ -60,6 +60,9 @@ Como saída o seu programa deverá imprimir o valor do produto da subsequência 
 
 ## Observações
 O número máximo de submissões é 10;
+
 O seu programa deve estar completamente contido em um único arquivo denominado `lab01.c`;
+
 Para a realização dos testes do SuSy, a compilação dos programas desenvolvidos considerar o comando:`gcc -std=c99 -pedantic -Wall -o lab01 lab01.c`;
+
 Idente corretamente o seu código e inclua comentários no decorrer do seu programa.
