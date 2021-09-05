@@ -18,7 +18,6 @@ Como saída o seu programa deverá imprimir o valor do produto da subsequência 
 
 ```
 5
-
 0.494 -0.391 0.000 0.927 0.841
 ```
 
@@ -34,7 +33,6 @@ Como saída o seu programa deverá imprimir o valor do produto da subsequência 
 
 ```
 5
-
 -0.627 -7.142 0.000 6.278 -4.148
 ```
 
