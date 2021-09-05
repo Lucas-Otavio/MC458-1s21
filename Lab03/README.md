@@ -146,9 +146,13 @@ Logo, no total, é coletado  `1 + 2 = 3`  reais.
 ```
 
 Neste exemplo, a peça começa na casa  `(0, 0)`  e é movida para a casa  `(1, 1)` , coletando-se  `8`  reais.
+
 Então, a peça é movida da casa  `(1, 1)`  para a casa  `(2, 2)` , coletando-se  `8`  reais.
+
 Depois, a peça é movida da casa  `(2, 2)`  para a casa  `(3, 1)` , coletando-se  `6`  reais.
+
 Por fim, a peça é movida da casa  `(3, 1)`  para a casa  `(4, 1)` , coletando-se  `7`  reais.
+
 Logo, no total, é coletado  `8 + 8 + 6 + 7 = 29`  reais.
 
 ## Observações
