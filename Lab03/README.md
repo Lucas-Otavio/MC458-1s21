@@ -157,6 +157,9 @@ Logo, no total, é coletado  `8 + 8 + 6 + 7 = 29`  reais.
 
 ## Observações
 O número máximo de submissões é 10;
+
 O seu programa deve estar completamente contido em um único arquivo denominado `lab03.c`;
+
 Para a realização dos testes do SuSy, a compilação dos programas desenvolvidos considerar o comando:`gcc -std=c99 -pedantic -Wall -o lab02 lab03.c`;
+
 Idente corretamente o seu código e inclua comentários no decorrer do seu programa.
